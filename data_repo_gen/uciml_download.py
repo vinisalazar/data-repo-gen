@@ -34,7 +34,7 @@ def _dedupe_columns(existing, new_cols):
 
 
 def fetch_and_write(dataset_id: int, outdir: Path, separate: bool) -> None:
-    ds = fetch_ucirepo(id=int(dataset_id))
+    ds = fetch_ucirepo(id=int(dataset_id), skip_ssl_cert=True)
     name = ds.metadata.get("name", f"uci-{dataset_id}") or f"uci-{dataset_id}"
     slug = slugify(name)
     ds_dir = outdir / f"{dataset_id}_{slug}"
@@ -88,6 +88,7 @@ def main():
         except Exception as e:
             print(f"[error] {ds_id}: {e}")
             print("Try disabling SSL authentication in the HTTPS request.")
+            raise
 
 
 if __name__ == "__main__":
