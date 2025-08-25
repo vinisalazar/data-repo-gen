@@ -17,7 +17,10 @@ classifiers = [
     "Topic :: Education",
     "Topic :: Software Development :: Build Tools",
 ]
-dependencies = ["pandas", "nbformat", "scikit-learn"]
+dependencies = [
+    "pandas",
+    "nbformat",
+    "scikit-learn",
+    "ucimlrepo",
+]
 
-[project.scripts]
-data-repo-gen = "data_repo_gen.cli:main"
