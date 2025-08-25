@@ -1,0 +1,23 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "data-repo-gen"
+version = "0.1.0"
+description = "Generate intentionally messy teaching repos from any CSV."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Your Name"}]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Education",
+    "Topic :: Software Development :: Build Tools",
+]
+dependencies = ["pandas", "nbformat", "scikit-learn"]
+
+[project.scripts]
+data-repo-gen = "data_repo_gen.cli:main"
