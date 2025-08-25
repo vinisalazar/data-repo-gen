@@ -3,4 +3,5 @@ __pycache__/
 .venv/
 dist/
 build/
+datasets/
 *.egg-info

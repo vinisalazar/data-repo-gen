@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-download_uciml.py — Fetch UCI ML datasets by ID and save to CSV.
+uciml_download.py — Fetch UCI ML datasets by ID and save to CSV.
 
 Usage:
   data-repo-gen-fetch 109 159
@@ -87,6 +87,7 @@ def main():
             fetch_and_write(int(ds_id), outdir, args.separate)
         except Exception as e:
             print(f"[error] {ds_id}: {e}")
+            print("Try disabling SSL authentication in the HTTPS request.")
 
 
 if __name__ == "__main__":
