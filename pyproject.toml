@@ -24,3 +24,6 @@ dependencies = [
     "ucimlrepo",
 ]
 
+[project.scripts]
+data-repo-gen = "data_repo_gen.cli:main"
+data-repo-gen-fetch = "data_repo_gen.uciml_download:main"
